@@ -5,6 +5,7 @@
 
 <template>
   <h1>Главная страница</h1>
+  <Comp name = "Props TESTCOMP"/>
 </template>
 
 <style scoped>
