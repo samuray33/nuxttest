@@ -2,6 +2,10 @@
 let props = defineProps<{
     name: string
 }>();
+
+let emit = defineEmits<{
+  
+}>();
 </script>
 
 <template>
