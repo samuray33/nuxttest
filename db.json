@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "name": "Gabriel",
+      "surname": "Haitov",
+      "id": "qR-9kQ_6NcI"
+    },
+    {
+      "name": "Apalon",
+      "surname": "Aresov",
+      "id": "CNq3DcbLoNs"
+    },
+    {
+      "name": "name",
+      "surname": "surname",
+      "id": "MmoNySofGlA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
