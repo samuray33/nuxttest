@@ -18,7 +18,8 @@ const rout = useRouter();
 // }
 
 // получение данных
-let {data, pending: pendingPost, refresh: refreshPost} = await useFetch("http://localhost:4000/posts", {
+// useLazyFetch - ленивая загрузка может проийзайти рендер без ожидание загрузки данных
+let {data, pending: pendingPost, refresh: refreshPost} = await useLazyFetch("http://localhost:4000/posts", {
   immediate: false,
   method: "get",
 });
