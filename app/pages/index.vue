@@ -1,4 +1,8 @@
 <script setup>
+// pinia достаем данные из стора
+import { useStore } from '~/stores/post';
+let peremennaya = useStore();
+// делаем роут на будушее пока
 const rout = useRouter();
 
 // добавление данных
@@ -19,7 +23,7 @@ const rout = useRouter();
 
 // получение данных
 // useLazyFetch - ленивая загрузка может проийзайти рендер без ожидание загрузки данных
-let {data, pending: pendingPost, refresh: refreshPost} = useLazyFetch("http://localhost:4000/posts", {
+let {data, pending: pendingPost, refresh: refreshPost} = useLazyFetch(peremennaya.URL.baseURL, {
   immediate: false,
   method: "get",
 });
@@ -28,6 +32,7 @@ let {data, pending: pendingPost, refresh: refreshPost} = useLazyFetch("http://lo
 let dovnloade = async() => {
   await refreshPost();
 }
+
 
 </script>
 
@@ -39,6 +44,7 @@ let dovnloade = async() => {
   <h1 v-if="pendingPost">загрузка.....</h1>
   <div v-else v-for="post in data" :key="post.id">
     <h1>{{ post.name }} {{ post.surname }}</h1>
+    <h1>{{ peremennaya.hello }}, {{ peremennaya.URL.baseURL }}</h1>
   </div>
 </template>
 
