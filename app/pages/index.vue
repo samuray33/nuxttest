@@ -1,6 +1,5 @@
 <script setup>
-// pinia достаем данные из стора
-import { useStore } from '~/stores/post';
+// pinia достаем данные из стора (импорты в nuxt не нужны даже если они автоматом появляются)
 let peremennaya = useStore();
 // делаем роут на будушее пока
 const rout = useRouter();
@@ -32,7 +31,6 @@ let {data, pending: pendingPost, refresh: refreshPost} = useLazyFetch(peremennay
 let dovnloade = async() => {
   await refreshPost();
 }
-
 
 </script>
 

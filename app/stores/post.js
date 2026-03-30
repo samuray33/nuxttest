@@ -1,3 +1,4 @@
+// в пиниа мы сохроняем функции computed и/или переменные не какой ассинхроншены и функции тут не юзаем
 import { defineStore } from 'pinia'
 import { ref } from 'vue';
 

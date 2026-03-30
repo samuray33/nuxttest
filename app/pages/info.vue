@@ -1,10 +1,11 @@
-<script setup lang="ts">
-
+<script setup>
+// достаем переменную из компосиблес 
+let dataComposible = useTestcomposible();
 
 </script>
 
 <template>
-  <h1>информация</h1>
+  <h1>информация {{ dataComposible.testData }}</h1>
 </template>
 
 <style scoped>
